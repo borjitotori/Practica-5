@@ -55,3 +55,31 @@ mutation{
    }
 }
 ```
+
+## Suscripciones
+
+Todas las mutaciones que modifiquen algun partido mandan el partido modificado a todas las suscripciones de equipos del partido y el partido en si mismo
+
+Para poder suscribirte se usan los comandos:
+
+```graphql
+subscription{
+  subequipo(_id: "<id del equipo>"){
+    resultado
+    .
+    .
+    .
+   }
+}
+```
+
+```graphql
+subscription{
+  subpartido(_id: "<id del partido>"){
+    resultado
+    .
+    .
+    .
+   }
+}
+```
